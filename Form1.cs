@@ -20,93 +20,87 @@ namespace VucutKitleIndeksHesaplama
         static public string cinsiyet;
         private void btnHesapla_Click(object sender, EventArgs e)
         {
-            //method olarak oluşturduğum textbox durum kontrollerini çağırıp kullanıyorum.
-            Textboxkontrol();
             /************************************************/
             double boy, kilo, vki;
-            boy = double.Parse(txbBoy.Text); //parse kullanma amacım null değere izin vermemesi.
-            kilo = double.Parse(txbKilo.Text);
-            boy = boy / 100; 
-            vki = kilo / (boy * boy);
-            vki = Math.Round(vki); // Sayıyı yukarı yuvarladım
-            lblVki.Text = vki.ToString();
+            if (txbBoy.Text == "" && txbKilo.Text == "")
+            {
+                MessageBox.Show("Kutucukları boş bırakma!!");
+            }
+            else
+            {
 
-            if (cinsiyet == "Erkek")
-            {
-                if (vki < 18)
+
+                boy = double.Parse(txbBoy.Text); //parse kullanma amacım null değere izin vermemesi.
+                kilo = double.Parse(txbKilo.Text);
+                boy = boy / 100;
+                vki = kilo / (boy * boy);
+                vki = Math.Round(vki); // Sayıyı yukarı yuvarladım
+                lblVki.Text = vki.ToString();
+
+                if (cinsiyet == "Erkek")
                 {
-                    lbldurum.Text = "Zayıf";
-                    lbldurum.ForeColor = System.Drawing.Color.Red;
-                    lblVki.ForeColor = System.Drawing.Color.Red;
-                }
-                else if (vki >= 18 && vki < 25)
-                {
-                    lbldurum.Text = "Normal";
-                    lbldurum.ForeColor = System.Drawing.Color.Green;
-                    lblVki.ForeColor = System.Drawing.Color.Green;
-                }
-                else if (vki >= 25 && vki < 30)
-                {
-                    lbldurum.Text = "Kilolu";
-                    lbldurum.ForeColor = System.Drawing.Color.Red;
-                    lblVki.ForeColor = System.Drawing.Color.Red;
-                }
-                else if (vki >= 30 && vki < 35)
-                {
-                    lbldurum.Text = "Obez";
-                    lbldurum.ForeColor = System.Drawing.Color.DarkRed;
-                    lblVki.ForeColor = System.Drawing.Color.DarkRed;
-                }
-                else
-                {
-                    lbldurum.Text = "Ciddi Obez";
-                    lbldurum.ForeColor = System.Drawing.Color.DarkRed;
-                    lblVki.ForeColor = System.Drawing.Color.DarkRed;
-                }
-            }
-            else if (cinsiyet == "Kadın")
-            {
-                if (vki < 18)
-                {
-                    lbldurum.Text = "Zayıf";
-                    lbldurum.ForeColor = System.Drawing.Color.Red;
-                    lblVki.ForeColor = System.Drawing.Color.Red;
-                }
-                else if (vki >= 18 && vki < 25)
-                {
-                    lbldurum.Text = "Normal";
-                    lbldurum.ForeColor = System.Drawing.Color.Green;
-                    lblVki.ForeColor = System.Drawing.Color.Green;
-                }
-                else if (vki >= 25 && vki < 30)
-                {
-                    lbldurum.Text = "Kilolu";
-                    lbldurum.ForeColor = System.Drawing.Color.Red;
-                    lblVki.ForeColor = System.Drawing.Color.Red;
-                }
-                else if (vki >= 30 && vki < 35)
-                {
-                    lbldurum.Text = "Obez";
-                    lbldurum.ForeColor = System.Drawing.Color.DarkRed;
-                    lblVki.ForeColor = System.Drawing.Color.DarkRed;
-                }
-                else
-                {
-                    lbldurum.Text = "Ciddi Obez";
-                    lbldurum.ForeColor = System.Drawing.Color.DarkRed;
-                    lblVki.ForeColor = System.Drawing.Color.DarkRed;
-                }
-            }
-        }
-        private void Textboxkontrol()
-        {
-            foreach (Control item in this.Controls)
-            {
-                if (item is TextBox)
-                {
-                    if (item.Text == "")
+                    if (vki < 18)
                     {
-                        MessageBox.Show("Bu alan boş olamaz!");
+                        lbldurum.Text = "Zayıf";
+                        lbldurum.ForeColor = System.Drawing.Color.Red;
+                        lblVki.ForeColor = System.Drawing.Color.Red;
+                    }
+                    else if (vki >= 18 && vki < 25)
+                    {
+                        lbldurum.Text = "Normal";
+                        lbldurum.ForeColor = System.Drawing.Color.Green;
+                        lblVki.ForeColor = System.Drawing.Color.Green;
+                    }
+                    else if (vki >= 25 && vki < 30)
+                    {
+                        lbldurum.Text = "Kilolu";
+                        lbldurum.ForeColor = System.Drawing.Color.Red;
+                        lblVki.ForeColor = System.Drawing.Color.Red;
+                    }
+                    else if (vki >= 30 && vki < 35)
+                    {
+                        lbldurum.Text = "Obez";
+                        lbldurum.ForeColor = System.Drawing.Color.DarkRed;
+                        lblVki.ForeColor = System.Drawing.Color.DarkRed;
+                    }
+                    else
+                    {
+                        lbldurum.Text = "Ciddi Obez";
+                        lbldurum.ForeColor = System.Drawing.Color.DarkRed;
+                        lblVki.ForeColor = System.Drawing.Color.DarkRed;
+                    }
+                }
+                else if (cinsiyet == "Kadın")
+                {
+                    if (vki < 18)
+                    {
+                        lbldurum.Text = "Zayıf";
+                        lbldurum.ForeColor = System.Drawing.Color.Red;
+                        lblVki.ForeColor = System.Drawing.Color.Red;
+                    }
+                    else if (vki >= 18 && vki < 25)
+                    {
+                        lbldurum.Text = "Normal";
+                        lbldurum.ForeColor = System.Drawing.Color.Green;
+                        lblVki.ForeColor = System.Drawing.Color.Green;
+                    }
+                    else if (vki >= 25 && vki < 30)
+                    {
+                        lbldurum.Text = "Kilolu";
+                        lbldurum.ForeColor = System.Drawing.Color.Red;
+                        lblVki.ForeColor = System.Drawing.Color.Red;
+                    }
+                    else if (vki >= 30 && vki < 35)
+                    {
+                        lbldurum.Text = "Obez";
+                        lbldurum.ForeColor = System.Drawing.Color.DarkRed;
+                        lblVki.ForeColor = System.Drawing.Color.DarkRed;
+                    }
+                    else
+                    {
+                        lbldurum.Text = "Ciddi Obez";
+                        lbldurum.ForeColor = System.Drawing.Color.DarkRed;
+                        lblVki.ForeColor = System.Drawing.Color.DarkRed;
                     }
                 }
             }
