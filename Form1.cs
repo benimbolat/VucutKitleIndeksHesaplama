@@ -26,8 +26,9 @@ namespace VucutKitleIndeksHesaplama
             double boy, kilo, vki;
             boy = double.Parse(txbBoy.Text); //parse kullanma amacım null değere izin vermemesi.
             kilo = double.Parse(txbKilo.Text);
-            boy = boy / 100;
+            boy = boy / 100; 
             vki = kilo / (boy * boy);
+            vki = Math.Round(vki); // Sayıyı yukarı yuvarladım
             lblVki.Text = vki.ToString();
 
             if (cinsiyet == "Erkek")
@@ -118,19 +119,16 @@ namespace VucutKitleIndeksHesaplama
                 "VKİ 31 ile 35 arasındaysa OBEZ, " +
                 "VKİ 36'nın üzerindeyse CİDDİ OBEZ olarak kabul edilir.");
         }
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             CinsiyetSecimEkrani cinsiyetSecimEkrani = new CinsiyetSecimEkrani();
             cinsiyetSecimEkrani.Show();
             this.Close();
         }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             txbBoy.Clear(); //Temizle komutundan sonra TextBox içerisini temizler.
@@ -138,7 +136,6 @@ namespace VucutKitleIndeksHesaplama
             lbldurum.Text = "bekleniyor...";
             lblVki.Text = "NaN";
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             //Cinsiyet durumuna göre Erkek veya Kadın cinsiye sembolu getirecek kod
@@ -146,15 +143,12 @@ namespace VucutKitleIndeksHesaplama
             {
                 pictureBoxiconman.Visible = true;
                 pictureBoxiconwoman.Visible = false;
-
             }
             else if (cinsiyet == "Kadın")
             {
                 pictureBoxiconwoman.Visible = true;
                 pictureBoxiconman.Visible = false;
-
             }
-
         }
     }
 }

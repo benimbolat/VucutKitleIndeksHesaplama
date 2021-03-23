@@ -103,10 +103,10 @@ namespace VucutKitleIndeksHesaplama
             // lblVki
             // 
             this.lblVki.AutoSize = true;
-            this.lblVki.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblVki.Location = new System.Drawing.Point(162, 68);
+            this.lblVki.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblVki.Location = new System.Drawing.Point(197, 69);
             this.lblVki.Name = "lblVki";
-            this.lblVki.Size = new System.Drawing.Size(97, 18);
+            this.lblVki.Size = new System.Drawing.Size(143, 25);
             this.lblVki.TabIndex = 10;
             this.lblVki.Text = "bekleniyor...";
             // 
@@ -123,10 +123,10 @@ namespace VucutKitleIndeksHesaplama
             // lbldurum
             // 
             this.lbldurum.AutoSize = true;
-            this.lbldurum.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbldurum.Location = new System.Drawing.Point(185, 105);
+            this.lbldurum.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbldurum.Location = new System.Drawing.Point(173, 105);
             this.lbldurum.Name = "lbldurum";
-            this.lbldurum.Size = new System.Drawing.Size(45, 18);
+            this.lbldurum.Size = new System.Drawing.Size(62, 25);
             this.lbldurum.TabIndex = 12;
             this.lbldurum.Text = "NaN";
             // 
@@ -199,7 +199,7 @@ namespace VucutKitleIndeksHesaplama
             // pictureBoxiconwoman
             // 
             this.pictureBoxiconwoman.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxiconwoman.Image")));
-            this.pictureBoxiconwoman.Location = new System.Drawing.Point(136, 64);
+            this.pictureBoxiconwoman.Location = new System.Drawing.Point(177, 67);
             this.pictureBoxiconwoman.Name = "pictureBoxiconwoman";
             this.pictureBoxiconwoman.Size = new System.Drawing.Size(20, 27);
             this.pictureBoxiconwoman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -210,7 +210,7 @@ namespace VucutKitleIndeksHesaplama
             // pictureBoxiconman
             // 
             this.pictureBoxiconman.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxiconman.Image")));
-            this.pictureBoxiconman.Location = new System.Drawing.Point(135, 64);
+            this.pictureBoxiconman.Location = new System.Drawing.Point(176, 67);
             this.pictureBoxiconman.Name = "pictureBoxiconman";
             this.pictureBoxiconman.Size = new System.Drawing.Size(20, 27);
             this.pictureBoxiconman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
