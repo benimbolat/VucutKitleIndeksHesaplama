@@ -17,19 +17,17 @@ namespace VucutKitleIndeksHesaplama
             InitializeComponent();
         }
 
-        static public string cinsiyet;
+        static public string cinsiyet; //CinsiyetSecimEkraninden veri çekmek için oluşturdum.
         private void btnHesapla_Click(object sender, EventArgs e)
         {
-            /************************************************/
             double boy, kilo, vki;
+
             if (txbBoy.Text == "" && txbKilo.Text == "")
             {
                 MessageBox.Show("Kutucukları boş bırakma!!");
             }
             else
             {
-
-
                 boy = double.Parse(txbBoy.Text); //parse kullanma amacım null değere izin vermemesi.
                 kilo = double.Parse(txbKilo.Text);
                 boy = boy / 100;
