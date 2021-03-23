@@ -4,10 +4,16 @@
 
      Buradan cinsiyetinizi seçerek bir sonraki form ekranına yönlendirme yapılır. 
      Burada alınan Cinsiyet bilgisi hesaplama formumuzda kullanılır.
+     
+![Giriş ve Seçim Ekranı](https://octodex.github.com/images/yaktocat.png) 
+    
  
   2-) VKİ Hesaplama Ekranı
 
     Cinsiyet seçim ekranından alınan değerlere göre ;
           - Cinsiyet sembolu
           - Hesaplama sırasında cinsiyet'e özel matematiksel işlemle yapılır.
+          
    Geri gitme iconu sayesinde tekrar cinsiyet seçimi yapılabilir.
+   
+![VKİ Hesaplama Ekranı](https://octodex.github.com/images/yaktocat.png)
