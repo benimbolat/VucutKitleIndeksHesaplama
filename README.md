@@ -2,7 +2,8 @@
 
   1-) Giriş Ekranı
 
-     Buradan cinsiyetinizi seçerek bir sonraki form ekranına yönlendirme yapılır. Burada alınan Cinsiyet bilgisi hesaplama formumuzda kullanılır.
+     Buradan cinsiyetinizi seçerek bir sonraki form ekranına yönlendirme yapılır. 
+     Burada alınan Cinsiyet bilgisi hesaplama formumuzda kullanılır.
  
   2-) VKİ Hesaplama Ekranı
 
